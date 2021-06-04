@@ -14,13 +14,10 @@ import Colors from "../constants/colors";
 import Input from "../components/Input";
 import NumberContainer from "../components/NumberContainer";
 
-export default function StartGameScreen( {startGameHandler} ) {
+export default function StartGameScreen({ startGameHandler }) {
   const [enteredValue, setEnteredValue] = useState("");
   const [confirmed, setConfirmed] = useState(false);
   const [selectedNumber, setSelectedNumber] = useState();
-
-  console.log(startGameHandler);
-
 
   const numberInputHandler = (inputText) => {
     setEnteredValue(inputText.replace(/[^0-9]/g, ""));
@@ -54,7 +51,10 @@ export default function StartGameScreen( {startGameHandler} ) {
       <Card style={styles.summaryContainer}>
         <Text>You selected </Text>
         <NumberContainer selectedNumber={selectedNumber} />
-        <Button title="START GAME!" onPress={()=> startGameHandler(selectedNumber)}/>
+        <Button
+          title="START GAME!"
+          onPress={() => startGameHandler(selectedNumber)}
+        />
       </Card>
     );
   }
@@ -131,6 +131,6 @@ const styles = StyleSheet.create({
   },
   summaryContainer: {
     marginTop: 20,
-    alignItems: 'center',
+    alignItems: "center",
   },
 });
