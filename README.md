@@ -1,4 +1,9 @@
-# react-native-second-app
+# react-native-game
 
-https://www.youtube.com/watch?v=qSRrxpdMpVc
+![applicatie_example](assets/react_native_app.png)
+
+## Guess a number
+A little game created with ReactNative.
+
+
 

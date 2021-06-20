@@ -6,6 +6,6 @@ export default StyleSheet.create({
     },
     title: {
         fontFamily: 'open-sans-bold',
-        fontSize: 30
+        fontSize: 20
     }
 })
