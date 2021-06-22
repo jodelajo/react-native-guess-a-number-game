@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, Platform } from 'react-native';
+import Colors from '../constants/colors';
 
 const TitleText = props => (
   <Text style={{ ...styles.title, ...props.style }}>{props.children}</Text>
@@ -8,7 +9,8 @@ const TitleText = props => (
 const styles = StyleSheet.create({
   title: {
     fontFamily: 'open-sans-bold',
-    fontSize: 18
+    fontSize: 18,
+    color: Platform.OS === 'ios' ? Colors.primary : 'white',
   }
 });
 
